@@ -276,3 +276,20 @@ uvicorn app:app --reload
   "final_credit_decision": "APPROVE - SAFE CREDIT PROFILE"
 }
 ```
+
+###  Programmatic API Execution Sample (`cURL`)
+Developers and system engineers can programmatically query the live endpoint locally using the following standardized terminal request string:
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "sub_grade": "C2",
+  "int_rate": 14.5,
+  "loan_amnt": 12000,
+  "annual_inc": 75000,
+  "bc_util": 58.2
+}'
+```
