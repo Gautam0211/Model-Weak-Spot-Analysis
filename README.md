@@ -9,6 +9,7 @@ To solve this, we developed a high-performance **Two-Stage Residual Regressor Fr
 1. **Stage 1 (Linear Core):** Deploy and hyperparameter-tune a baseline Credit Scorecard model to establish the absolute linear predictive ceiling.
 2. **Stage 2 (Machine Learning Auditor):** Extract the continuous calculation errors (residuals) and train a regularized, tree-based machine learning engine (**XGBoost**) to predict the direction and scale of the baseline's mistakes.
 3. **Stage 3 (Explainability & Segmentation):** Apply game-theoretic allocations (**SHAP**) to map structural feature interactions on true unscaled dollar metrics, and feed those risk signatures into an unsupervised clustering engine (**K-Means**) to surgically isolate and profile the bank's underperforming borrower segments.
+4. **Stage 4 (Real-Time Model Deployment):** Wrap the synchronized analytical engine into a low-latency enterprise microservice (FastAPI + Uvicorn) complete with strict data validation fences and transparent components auditing for front-end lending systems.
 
 
 ---
